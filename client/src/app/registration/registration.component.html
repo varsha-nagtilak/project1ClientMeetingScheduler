@@ -1,0 +1,30 @@
+<div class="container my-5">
+      <h3 class="text-success mb-5">Create Client</h3>
+      <div class="alert alert-danger mb-5" role="alert" *ngIf="isInvalid">
+            {{ error }}
+      </div>
+      <form>
+            <p>Please fill in this form to create an client.</p>
+            <hr>
+
+            <label for="name"><b>Name</b></label>
+            <input type="text" [(ngModel)]="name" placeholder="Enter Name" name="name" id="name">
+      
+            <label for="email"><b>Email</b></label>
+            <input type="text" [(ngModel)]="email" placeholder="Enter Email" name="email" id="email" required>
+            
+            <label for="address"><b>Address</b></label><br>
+            <textarea id="address" [(ngModel)]="address" placeholder="Address" name="address" rows="4" cols="50"> </textarea>
+            <br>
+            <label for="psw"><b>Password</b></label>
+            <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw" id="psw" required>
+      
+            <label for="psw-repeat"><b>Repeat Password</b></label>
+            <input type="password" [(ngModel)]="repeatPassword" placeholder="Repeat Password" name="psw-repeat" id="psw-repeat" required>
+            <hr>
+      
+            <button type="button" class="registerbtn" (click)="register()">Register</button>
+      </form>
+</div>
+
+    

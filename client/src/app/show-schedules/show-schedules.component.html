@@ -1,0 +1,36 @@
+
+<div class="container my-5">
+
+<h3 class="text-success">All Meetings</h3>
+
+<div class="alert alert-success mt-3" role="alert" *ngIf="showMessage">
+  {{ message }}
+ </div>
+
+<table class="table my-5">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Topic</th>
+        <th scope="col">No. of Peoples</th>
+        <th scope="col">Start Date Time</th>
+        <th scope="col">End Date Time</th>
+      </tr>
+    </thead>
+    <tbody class="table-group-divider">
+      <tr *ngFor="let meeting of meetings">
+        <th scope="row">{{ meeting.id }}</th>
+        <td>{{ meeting.topic }}</td>
+        <td>{{ meeting.noOfPeoples }}</td>
+        <td>{{ meeting.startDateTime }}</td>
+        <td>{{ meeting.endDateTime }}</td>
+        <!-- <td>
+            <button type="button" routerLink="/edit/{{product.id}}" class="btn btn-secondary"> Edit </button>
+        </td>
+        <td><button type="button" (click)="deleteProduct(product.id)" class="btn btn-secondary"> Delete 
+
+        </button></td> -->
+      </tr>
+    </tbody>
+    </table>
+</div>

@@ -1,0 +1,25 @@
+<div class="container my-5">
+    <h3 class="text-success">Schedule meeting</h3>
+
+    <div class="alert alert-danger my-5" role="alert" *ngIf="isInValid">
+      {{ error }}
+      </div>
+
+    <form class="my-5">
+          <label for="topic"><b>Meeting Topic</b></label>
+          <input type="text" [(ngModel)]="topic" placeholder="Enter topic" name="topic" id="topic">
+      
+          <label for="noOfPeoples"><b>Number of People</b></label>
+          <input type="text" [(ngModel)]="noOfPeoples" placeholder="Enter number" name="noOfPeoples" id="noOfPeoples">
+        
+          <label for="startDateTime"><b>Start Time</b></label><br>
+          <input type="datetime-local" [(ngModel)]="startDateTime" placeholder="Enter start date time" name="startDateTime" id="startDate">
+          <br>
+          {{ startDateTime }}
+          <label for="endDateTime"><b>End Time</b></label><br>
+          <input type="datetime-local" [(ngModel)]="endDateTime" placeholder="Enter end date time" name="endDateTime" id="endDateTime">
+          <hr>
+        
+          <button type="button" class="schedule" (click)="scheduleMeteeting()">Schedule</button>
+    </form>
+    </div>

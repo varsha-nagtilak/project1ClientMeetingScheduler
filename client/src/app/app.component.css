@@ -1,0 +1,31 @@
+/* .active{
+    background-color: aquamarine;
+    color: blue;
+}
+.inactive{
+    background-color: gray;
+    color: black;
+} */
+.active{
+    Color:green;
+    font-weight:bold;
+    }
+    
+    .error{
+    Color:red;
+    text-decoration:underline;
+    }
+
+    .redClass {
+        color: red;
+        background-color: black;
+    }
+    .blueClass {
+        color: blue;
+        background-color: gray;
+    }
+    button {
+        padding: 10px;
+        margin: 10px;
+    }
+    

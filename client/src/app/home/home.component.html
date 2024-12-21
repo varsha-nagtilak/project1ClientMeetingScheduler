@@ -1,0 +1,10 @@
+<div class="jumbotron my-5">
+    <h5 class="display-6 my-3 text-success">Welcome, {{getLoggedinUserName()}}</h5>
+    <p class="lead">You can now Schedule and View Meetings!!!</p>
+    <hr class="my-4">
+    <p>Please click on "Schedule Meeting" if you want to create new meeting for you. If you want to check your meetings please click on "Show All Meetings" button</p>
+    <p class="lead my-5">
+       <a routerLink="/schedule" class="btn btn-secondary btn-md">Schedule Meeting</a>
+       <a  routerLink="/show-meetings/{{getLoggedinUser()}}" class="btn btn-secondary btn-md  mx-2">Show All Meeting</a>
+    </p>
+  </div>

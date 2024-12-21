@@ -1,0 +1,27 @@
+
+
+
+<div class="container my-5">
+
+    <h3 class="text-success mb-5">Login</h3>
+
+    <div class="alert alert-danger mb-5" role="alert" *ngIf="isInValid">
+    {{ error }}
+    </div>
+    <div class="alert alert-success mb-5" role="alert" *ngIf="showMessage">
+        {{ message }}
+    </div>
+
+    <form>
+          <p>Please fill in this form to login client.</p>
+          <hr>
+      
+          <label for="email"><b>Email</b></label>
+          <input type="text" [(ngModel)]="email" placeholder="Enter Email" name="email" id="email">
+    
+          <label for="psw"><b>Password</b></label>
+          <input type="password" [(ngModel)]="password" placeholder="Enter Password" name="psw" id="psw">
+          <hr>
+          <button type="button" class="registerbtn" (click)="login()">Login</button>
+    </form>
+</div>
