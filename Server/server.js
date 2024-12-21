@@ -22,7 +22,6 @@ const db = mysql.createConnection({
     database: "clientManagementApp",
 });
 
-
 db.connect(
     err => {
         if(err) {
@@ -32,17 +31,13 @@ db.connect(
         }
     }
 );
+
 app.listen(PORT, () => {
   console.log(`Server is running on port ${PORT}.`);
 });
 
-
-// simple route
-app.get("/", (req, res) => {
-    res.json({ message: "Welcome to bezkoder application." });
-  });
-  
-  app.post("/createUser", async (req,res) => {
+//CREATE USER
+app.post("/createUser", async (req,res) => {
       const name = req.body.name;
       const email = req.body.email;
       const address = req.body.description;
@@ -68,9 +63,9 @@ app.get("/", (req, res) => {
         })
        }
       })
-      }) //end of app.post()
+      }) 
 
-      //LOGIN (AUTHENTICATE USER)
+//LOGIN (AUTHENTICATE USER)
 app.post("/login", (req, res)=> {
     const email = req.body.email
     const password = req.body.password
@@ -98,10 +93,10 @@ app.post("/login", (req, res)=> {
         }
       }
      })
-    }) //end of app.post()
+    })
   
 
-     //insert the data
+//SCHEDULE MEETING
   app.post("/scheduleMeteeting",(req,res)=>{
 
     const {topic,noOfPeoples,startDateTime,endDateTime, userId}=req.body;
@@ -119,7 +114,7 @@ app.post("/login", (req, res)=> {
     });
  });
 
- //get all the meetings ->select * from meeting
+//GET ALL MEETINGS CREATED BY USER
  app.get('/meetings/:userId',(req,res)=>{
   const userId=req.params.userId;
   const sql='select * from meeting where userId=?'; 

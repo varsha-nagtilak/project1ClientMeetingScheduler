@@ -56,7 +56,5 @@ export class RegistrationComponent implements OnInit {
         this.error = "Please enter all the fields."
 
     }
-
-   
   }
 }

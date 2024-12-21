@@ -19,9 +19,7 @@ export class ScheduleComponent implements OnInit{
   error:string="";
   constructor(private http:HttpClient,private route:ActivatedRoute,private router:Router, private authService:AuthService) { }
 
-  //createdBy:string = this.authService.getItem('email');
   ngOnInit(): void {
-   
   }
   
   scheduleMeteeting(){

@@ -19,8 +19,6 @@ constructor(private http:HttpClient, private route:ActivatedRoute,private router
   this.userId= this.authService.getItem("user").id
 }
 
- //it is used as a default method that need to executed during the load of a page
-//==> on load of this component page this method will be executed by default
 ngOnInit(): void {
   this.userId= this.authService.getItem("user").id
   this.route.paramMap.subscribe(params=>{
