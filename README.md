@@ -23,5 +23,5 @@ create table meeting(id int not null primary key auto_increment,topic varchar(50
     cd cleint
 #### Install Dependencies:
      npm install
-#### Run Clent App:
+#### Run Client App:
      ng serve -o
